@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ekeleme Miracle — Frontend • UI/UX • Design</title>
+<meta name="description" content="Ekeleme Miracle (M.E) — Frontend Engineer, UI/UX, and Graphic Design.">
+<link rel="icon" href="assets/favicon.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topnav">
+  <div class="container navwrap">
+    <a href="#home" class="brand">
+      <img class="logo" src="assets/logo.png" alt="logo">
+      <span class="name">Ekeleme Miracle</span>
+    </a>
+    <nav class="navlinks" id="nav">
+      <a href="#home" class="navlink">Home</a>
+      <a href="#work" class="navlink">Work</a>
+      <a href="#about" class="navlink">About</a>
+      <a href="#contact" class="navlink">Contact</a>
+      <span class="underline"></span>
+    </nav>
+    <button class="hamburger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main id="home" class="hero container">
+  <p class="kicker">Frontend • UI/UX • Graphic Design</p>
+  <h1 class="big">Hi, I'm <span class="grad">Ekeleme Miracle</span>.</h1>
+  <p class="lede">I craft fast, accessible interfaces and clean design systems.</p>
+  <div class="roles">
+    <span class="chip">Frontend Engineer</span>
+    <span class="chip">UI/UX Developer</span>
+    <span class="chip">Graphic Designer</span>
+  
+  <div class="marquee"><div class="track">
+    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>TypeScript</span><span>Tailwind</span><span>Figma</span><span>Photoshop</span><span>Illustrator</span><span>Accessibility</span>
+    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>TypeScript</span><span>Tailwind</span><span>Figma</span><span>Photoshop</span><span>Illustrator</span><span>Accessibility</span>
+  </div></div>
+  </div>
+  <div class="cta">
+    <a href="#work" class="btn">See Projects</a>
+    <a href="#contact" class="btn ghost">Hire Me</a>
+  </div>
+</main>
+
+<section id="work" class="section container">
+  <div class="section-head">
+    <h2>Projects</h2><p class="muted">Selected work</p>
+  </div>
+  <div class="grid">
+    <a class="card" href="projects/beluga.html">
+      <div class="thumb"><img src="assets/beluga.jpg" alt="Beluga"></div>
+      <div class="meta"><h3>Beluga Whale Tours</h3><p>Artwork series & motion</p></div>
+    </a>
+    <a class="card" href="projects/drone.html">
+      <div class="thumb"><img src="assets/drone.jpg" alt="Drone UI"></div>
+      <div class="meta"><h3>Drone Control System</h3><p>Mobile UI for drone ops</p></div>
+    </a>
+    <a class="card" href="projects/landing.html">
+      <div class="thumb"><img src="assets/landing.jpg" alt="Landing"></div>
+      <div class="meta"><h3>Product Landing</h3><p>Conversion marketing page</p></div>
+    </a>
+    <a class="card" href="projects/brand.html">
+      <div class="thumb"><img src="assets/brand.jpg" alt="Brand"></div>
+      <div class="meta"><h3>MOON Brand Kit</h3><p>Logo, palette, type</p></div>
+    </a>
+  </div>
+</section>
+
+<section id="about" class="section container about">
+  <div class="about-text">
+    <h2>About Me</h2>
+    <p>I’m <strong>Ekeleme Miracle (M.E)</strong> - a creative frontend developer and graphic designer with a passion for bringing ideas to life through clean code and thoughtful visuals. My background in <strong>graphic design</strong> fuels my ability to craft interfaces that are not only functional but also visually engaging. On the web side, I specialize in building <strong>responsive, accessible, and performance-driven applications</strong>using modern tools and frameworks.
+
+<br>Whether I’m sketching a brand identity, prototyping a mobile UI, or coding a dynamic web experience, I thrive on solving problems through design and development. My goal is to create digital experiences that feel intuitive, polished, and impactful.</p>
+    <ul class="ticks">
+      <li>Semantic HTML & a11y standards</li>
+      <li>Reusable components + design tokens</li>
+      <li>Performance‑first approach</li>
+    </ul>
+  </div>
+  <div class="about-art">
+    <img src="assets/logo.png" alt="logo">
+  </div>
+</section>
+
+<section id="contact" class="section container contact">
+  <h2>Contact</h2>
+  <p class="muted">Have a project? Let’s talk.</p>
+  <form class="form" onsubmit="event.preventDefault(); this.reset(); alert('Thanks! I’ll reply soon.');">
+    <div class="row">
+      <input required placeholder="Your name">
+      <input required type="email" placeholder="Email">
+    </div>
+    <textarea rows="5" required placeholder="Tell me about your project"></textarea>
+    <button class="btn">Send Message</button>
+  </form>
+  <br>
+  <div class="socials">
+  <a href="https://github.com/iamgenny/iamgenny.git" target="_blank">
+    <i class="fab fa-github"></i> GitHub
+  </a>
+  <a href="https://linkedin.com/in/yourprofile" target="_blank">
+    <i class="fab fa-linkedin"></i> LinkedIn
+  </a>
+  <a href="https://www.instagram.com/_iam_genny?igsh=MTJncDJqcTlpa3Bj&utm_source=qr" target="_blank">
+    <i class="fab fa-instagram"></i> Instagram
+  </a>
+</div>
+
+</section>
+
+<footer class="footer">
+  <div class="container">© <span id="year"></span> Ekeleme Miracle — M.E</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
