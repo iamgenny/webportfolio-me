@@ -12,20 +12,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
   });
 
-  // Active link underline
-  const nav = document.querySelector('.navlinks');
-  const underline = document.querySelector('.underline');
-  const links = document.querySelectorAll('.navlink');
-  function moveUnderline(link){
-    if(!link || !underline) return;
-    const r = link.getBoundingClientRect();
-    const nr = nav.getBoundingClientRect();
-    underline.style.width = r.width + 'px';
-    underline.style.transform = `translateX(${r.left - nr.left}px)`;
-  }
-  links.forEach(l => l.addEventListener('mouseenter', ()=> moveUnderline(l)));
-  nav.addEventListener('mouseleave', ()=> moveUnderline(document.querySelector('.navlink.active')));
-
+  
   // Section spy
   const ids = ['home','work','about','contact'];
   const sections = ids.map(id=> document.getElementById(id));
@@ -66,3 +53,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
     tick();
   }
 });
+
+
+// Added for Assignment 2 accessibility
+
+// Accessibility keyboard support and nav toggle (added)
+document.addEventListener('keydown', function(e){ var t=e.target; if(t && t.getAttribute && t.getAttribute('role')==='button'){ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); t.click(); } } });
+(function(){ var navToggle=document.querySelector('.nav-toggle'); var navList=document.querySelector('.nav-list'); if(navToggle && navList){ navToggle.addEventListener('click', function(){ var expanded = navToggle.getAttribute('aria-expanded')==='true'; navToggle.setAttribute('aria-expanded', String(!expanded)); navList.classList.toggle('open'); }); } })();

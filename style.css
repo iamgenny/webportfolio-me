@@ -132,3 +132,18 @@ body.project{background:var(--bg)}
   width: 100%;
   border-radius: 8px;
 }
+
+/* Added for Assignment 2 accessibility/responsive */
+
+/* Accessibility & responsive helper styles added */
+.skip-link{ position:absolute; left:-999px; top:auto; background:#ffffff; color:#0b0b0b; padding:8px 12px; z-index:1000; border-radius:6px; text-decoration:none;}
+.skip-link:focus{ left:12px; top:12px; box-shadow:0 6px 18px rgba(0,0,0,0.3); }
+:focus{ outline:3px solid #66d9ff; outline-offset:4px; border-radius:6px; }
+button:focus,a:focus,input:focus,textarea:focus{ box-shadow:0 0 0 4px rgba(30,144,255,0.12); }
+img{ max-width:100%; height:auto; display:block; object-fit:cover; }
+/* responsive grid for projects */
+.projects-grid{ display:grid; gap:20px; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); }
+.image-row{ display:flex; gap:20px; flex-wrap:wrap; }
+.image-row img{ flex:1 1 45%; min-width:220px; border-radius:12px; }
+.nav-list{ display:flex; gap:20px; list-style:none; padding:0; margin:0; }
+@media (max-width:768px){ .nav-list{ display:block; } .nav-list li{ margin-bottom:12px;} .hero-title{ font-size:1.9rem;} .hero-sub{ font-size:1rem;} }
